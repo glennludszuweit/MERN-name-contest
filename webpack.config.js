@@ -9,11 +9,13 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.json/,
+        type: 'javascript/auto',
+        use: [require.resolve('json-loader')],
+      },
+      {
         test: /\.js$/,
-        exclude: /node_modules/,
-        use: {
-          loader: 'babel-loader',
-        },
+        loader: 'babel-loader',
       },
     ],
   },

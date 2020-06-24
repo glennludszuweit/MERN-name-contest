@@ -1,6 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import App from './App';
+import data from './devdata';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+import App from './components/App';
+
+ReactDOM.render(
+  <App contests={data.contests} />,
+  document.getElementById('root')
+);
